@@ -13,9 +13,9 @@ $url = isset($_SERVER['PATH_INFO']) ? explode('/', ltrim($_SERVER['PATH_INFO'],'
         require_once __DIR__.'/Controllers/index_controller.php';
         require_once __DIR__.'/Views/index_view.php';
 
-        $indexModel = New IndexModel();
-        $indexController = New IndexController($indexModel);
-        $indexView = New IndexView($indexController, $indexModel);
+        $indexModel = new IndexModel();
+        $indexController = new IndexController($indexModel);
+        $indexView = new IndexView($indexController, $indexModel);
 
         print $indexView->index();
 
